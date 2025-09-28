@@ -5,9 +5,10 @@ import animals
 class TierFactory:
     @staticmethod
     def create_tier(art, name, weight):
-        if art == "Löwe":
+        if art == "Lion":
             return animals.Lion(name, weight)
         elif art == "Elephant":
             return animals.Elephant(name, weight)
         else:
-            print("We dont have this animal in the database")
+            print(f"We dont have this animal: {art}, in the database")
+            return None

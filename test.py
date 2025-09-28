@@ -37,9 +37,21 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(tier.name, "Hans")
         self.assertEqual(tier.art, "Elephant")
         self.assertEqual(tier.weight, 1000)
+
     def test_tierfactory2(self):
         tier = TierFactory.create_tier("Pinguin", "Hans", 1000)
 
+    def test_more_factory(self):
+        tiere = [
+            TierFactory.create_tier("Lion", "Wolfgang", 175),
+            TierFactory.create_tier("Elephant", "Susi", 655),
+            TierFactory.create_tier("Pinguin", "Ralf", 20)
+        ]
+        for tier in tiere:
+            if tier is not None:
+                tier.info()
+            else:
+                continue
 
 
 if __name__ == '__main__':
