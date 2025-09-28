@@ -1,23 +1,44 @@
 """We start with the class Animals"""
+
+
 class Animals():
-    def __init__(self, name , art, weight):
+    def __init__(self, name, art, weight):
         self.name = name
         self.art = art
         self.weight = weight
+
     def info(self):
         print(f"{self.name} is a {self.art} and the weight: {self.weight} kg.")
-class Lion (Animals):
+
+
+class Lion(Animals):
     def __init__(self, name, weight):
-        super().__init__ (name, "Lion", weight)
-    def sleep(self):
-        print(f"{self.name} sleep!")
-    def sound(self):
-        print("Rawrrrrr")
-class Elephant(Animals):
-    def __init__(self, name, weight):
-        super().__init__(name, "Elephant", weight)
-    def sound(self):
-        print("töööörööö")
+        super().__init__(name, "Lion", weight)
+
     def sleep(self):
         print(f"{self.name} sleep!")
 
+    def sound(self):
+        print("Rawrrrrr")
+
+
+class Elephant(Animals):
+    def __init__(self, name, weight):
+        super().__init__(name, "Elephant", weight)
+
+    def sound(self):
+        print("töööörööö")
+
+    def sleep(self):
+        print(f"{self.name} sleep!")
+
+"""This is the Pattern builder"""
+class TierFactory:
+    @staticmethod
+    def create_tier(art, name, weight):
+        if art == "Löwe":
+            return Lion(name, weight)
+        elif art == "Elephant":
+            return Elephant(name, weight)
+        else:
+            print("We dont have this animal in the database")
