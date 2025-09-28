@@ -1,5 +1,5 @@
 import unittest
-from animals import Animals
+from animals import Animals, Lion
 
 
 class MyTestCase(unittest.TestCase):
@@ -9,6 +9,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(animal.name, "Simba")
         self.assertEqual(animal.art, "Lion")
         self.assertEqual(animal.weight, 190)
+    def test_lion(self):
+        lion = Lion("Frank",  150)
+        lion.info()
+        lion.sound()
+        lion.sleep()
+        self.assertEqual(lion.name, "Frank")
+        self.assertEqual(lion.art, "Lion")
+        self.assertEqual(lion.weight, 150)
 
 
 if __name__ == '__main__':

@@ -5,10 +5,12 @@ class Animals():
         self.art = art
         self.weight = weight
     def info(self):
-        print(f"{self.name} is a {self.art} and the weight: {self.weight}")
+        print(f"{self.name} is a {self.art} and the weight: {self.weight} kg.")
 class Lion (Animals):
     def __init__(self, name, weight):
-        super().__init__ ( name, "Lion",weight)
-        def sleep(self):
-            print(f"{self.name}")
+        super().__init__ (name, "Lion", weight)
+    def sleep(self):
+        print(f"{self.name} sleep!")
+    def sound(self):
+        print("Rawrrrrr")
 
