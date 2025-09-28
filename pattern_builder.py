@@ -1,7 +1,7 @@
 """This is the Pattern builder"""
 import animals
 
-
+"""We have a animal_builder"""
 class TierFactory:
     @staticmethod
     def create_tier(art, name, weight):
@@ -12,3 +12,8 @@ class TierFactory:
         else:
             print(f"We dont have this animal: {art}, in the database")
             return None
+
+class Enclosure_builder:
+    @staticmethod
+    def create_enclosure():
+        pass

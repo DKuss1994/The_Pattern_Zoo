@@ -6,9 +6,10 @@ class Animals():
         self.name = name
         self.art = art
         self.weight = weight
+        self.big = None
 
     def info(self):
-        print(f"{self.name} is a {self.art} and the weight: {self.weight} kg.")
+        print(f"{self.name} is a {self.art} and the weight: {self.weight} kg and {self.big}.")
 
 
 class Lion(Animals):
