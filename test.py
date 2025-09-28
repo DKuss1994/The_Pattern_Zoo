@@ -1,5 +1,5 @@
 import unittest
-from animals import Animals, Lion, Elephant
+from animals import Animals, Lion, Elephant, TierFactory
 
 
 class MyTestCase(unittest.TestCase):
@@ -11,21 +11,31 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(animal.weight, 190)
 
     def test_lion(self):
-        lion = Lion("Frank",  150)
+        lion = Lion("Frank", 150)
         lion.info()
         lion.sound()
         lion.sleep()
         self.assertEqual(lion.name, "Frank")
         self.assertEqual(lion.art, "Lion")
         self.assertEqual(lion.weight, 150)
+
     def test_elefant(self):
-        elephant = Elephant("Dumbo",  450)
+        elephant = Elephant("Dumbo", 450)
         elephant.info()
         elephant.sound()
         elephant.sleep()
         self.assertEqual(elephant.name, "Dumbo")
         self.assertEqual(elephant.art, "Elephant")
         self.assertEqual(elephant.weight, 450)
+
+    def test_tierfactory(self):
+        tier = TierFactory.create_tier("Elephant", "Hans", 1000)
+        tier.info()
+        tier.sound()
+        tier.sleep()
+        self.assertEqual(tier.name, "Hans")
+        self.assertEqual(tier.art, "Elephant")
+        self.assertEqual(tier.weight, 1000)
 
 
 if __name__ == '__main__':
