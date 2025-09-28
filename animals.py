@@ -32,13 +32,4 @@ class Elephant(Animals):
     def sleep(self):
         print(f"{self.name} sleep!")
 
-"""This is the Pattern builder"""
-class TierFactory:
-    @staticmethod
-    def create_tier(art, name, weight):
-        if art == "Löwe":
-            return Lion(name, weight)
-        elif art == "Elephant":
-            return Elephant(name, weight)
-        else:
-            print("We dont have this animal in the database")
+

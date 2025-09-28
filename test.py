@@ -1,5 +1,6 @@
 import unittest
-from animals import Animals, Lion, Elephant, TierFactory
+from animals import Animals, Lion, Elephant
+from pattern_builder import TierFactory
 
 
 class MyTestCase(unittest.TestCase):
@@ -36,6 +37,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(tier.name, "Hans")
         self.assertEqual(tier.art, "Elephant")
         self.assertEqual(tier.weight, 1000)
+    def test_tierfactory2(self):
+        tier = TierFactory.create_tier("Pinguin", "Hans", 1000)
+
 
 
 if __name__ == '__main__':
