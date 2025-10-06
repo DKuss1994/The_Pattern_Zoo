@@ -1,2 +1,1 @@
-#Singelton
-import animals_datebank
+#https://refactoring.guru/design-patterns

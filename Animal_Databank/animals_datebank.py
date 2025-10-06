@@ -1,6 +1,5 @@
 """We start with the class Animals"""
-
-
+from Animal_Databank.Enum_animal_datebank import TierArt as TA
 class Animals():
     def __init__(self, name, art, weight):
         self.name = name
@@ -14,7 +13,7 @@ class Animals():
 
 class Lion(Animals):
     def __init__(self, name, weight):
-        super().__init__(name, "Lion", weight)
+        super().__init__(name, TierArt.LION, weight)
 
     def sleep(self):
         print(f"{self.name} sleep!")

@@ -1,7 +1,7 @@
 import unittest
-from animals_datebank import Animals, Lion, Elephant
-from pattern_builder import TierFactory, Enclosure_builder
-
+from Animal_Databank.animals_datebank import Animals, Lion, Elephant
+from pattern_builder import TierFactory
+from Animal_Databank.Enum_animal_datebank import TierArt as TA
 
 class MyTestCase(unittest.TestCase):
     def test_animals(self):

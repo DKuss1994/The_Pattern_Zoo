@@ -1,6 +1,5 @@
 """This is the Pattern builder"""
 # Mit dem builder können wir schrittweise neue verschiede Typen erstellen
-import animals_datebank
 
 """We have a animal_builder"""
 #Hier erstellen wir neue Tiere die in den Zoo kommen.
