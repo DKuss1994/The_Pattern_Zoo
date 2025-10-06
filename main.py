@@ -1,2 +1,2 @@
 #Singelton
-import animals
+import animals_datebank

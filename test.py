@@ -1,6 +1,6 @@
 import unittest
-from animals import Animals, Lion, Elephant
-from pattern_builder import TierFactory
+from animals_datebank import Animals, Lion, Elephant
+from pattern_builder import TierFactory, Enclosure_builder
 
 
 class MyTestCase(unittest.TestCase):

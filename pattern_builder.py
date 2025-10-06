@@ -1,7 +1,9 @@
 """This is the Pattern builder"""
-import animals
+# Mit dem builder können wir schrittweise neue verschiede Typen erstellen
+import animals_datebank
 
 """We have a animal_builder"""
+#Hier erstellen wir neue Tiere die in den Zoo kommen.
 class TierFactory:
     @staticmethod
     def create_tier(art, name, weight):
@@ -13,7 +15,8 @@ class TierFactory:
             print(f"We dont have this animal: {art}, in the database")
             return None
 
-class Enclosure_builder:
-    @staticmethod
-    def create_enclosure():
+# Hier werden die Gehge für die Tiere erstellt
+class Vivarium_builder:
+    def create_vivarium(self ,art,in_or_out):
         pass
+
