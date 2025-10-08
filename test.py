@@ -1,5 +1,5 @@
 import unittest
-from Animal_Databank.animals_datebank import Animals, Lion, Elephant
+from Animal_Databank.animals_datebank import Animals, Lion, Elephant, Giraffe
 from pattern_builder import TierFactory
 from Animal_Databank.Enum_animal_datebank import TierArt as TA
 
@@ -28,6 +28,15 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(elephant.name, "Dumbo")
         self.assertEqual(elephant.art, "Elephant")
         self.assertEqual(elephant.weight, 450)
+    def test_giraffe(self):
+        giraffe = Giraffe("Charlie", 450)
+        giraffe = giraffe
+        giraffe.info()
+        giraffe.sound()
+        giraffe.sleep()
+        self.assertEqual(giraffe.name, "Charlie")
+        self.assertEqual(giraffe.art, TA.GIRAFFE.value)
+        self.assertEqual(giraffe.weight, 450)
 
     def test_tierfactory(self):
         tier = TierFactory.create_tier("Elephant", "Hans", 1000,"m")
