@@ -40,6 +40,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_tierfactory2(self):
         tier = TierFactory.create_tier("Pinguin", "Hans", 1000)
+    def test_tierfactory_Giraffe(self):
+        tier_rosi = TierFactory.create_tier(TA.GIRAFFE.value, "Rosi", 750,"w")
 
     def test_more_factory(self):
         tiere = [
