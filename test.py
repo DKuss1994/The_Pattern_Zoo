@@ -5,7 +5,7 @@ from Animal_Databank.Enum_animal_datebank import TierArt as TA
 
 class MyTestCase(unittest.TestCase):
     def test_animals(self):
-        animal = Animals("Simba", TA.LION.value, 190)
+        animal = Animals("Simba", TA.LION.value, 190,"m")
         animal.info()
         self.assertEqual(animal.name, "Simba")
         self.assertEqual(animal.art, "Lion")
