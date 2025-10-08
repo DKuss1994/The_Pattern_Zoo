@@ -5,3 +5,7 @@ class TierArt(Enum):
     ELEPHANT = "Elephant"
     PINGUIN = "Pinguin"
     GIRAFFE = "Giraffe"
+
+class Sex(Enum):
+    Female = 1
+    Male = 2
