@@ -13,7 +13,7 @@ class Animals():
 
 class Lion(Animals):
     def __init__(self, name, weight):
-        super().__init__(name, TierArt.LION, weight)
+        super().__init__(name, TA.LION.value, weight)
 
     def sleep(self):
         print(f"{self.name} sleep!")
@@ -24,7 +24,7 @@ class Lion(Animals):
 
 class Elephant(Animals):
     def __init__(self, name, weight):
-        super().__init__(name, "Elephant", weight)
+        super().__init__(name, TA.ELEPHANT.value, weight)
 
     def sound(self):
         print("töööörööö")
