@@ -30,7 +30,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(elephant.weight, 450)
 
     def test_tierfactory(self):
-        tier = TierFactory.create_tier("Elephant", "Hans", 1000)
+        tier = TierFactory.create_tier("Elephant", "Hans", 1000,"m")
         tier.info()
         tier.sound()
         tier.sleep()
