@@ -10,7 +10,7 @@ class TierFactory:
     def create_tier(art, name, weight):
         if art == TA.LION.value:
             return Lion(name, weight)
-        elif art == "Elephant":
+        elif art == TA.ELEPHANT.value:
             return Elephant(name, weight)
         else:
             print(f"We dont have this animal: {art}, in the database")
@@ -19,5 +19,5 @@ class TierFactory:
 # Hier werden die Gehge für die Tiere erstellt
 class Vivarium_builder:
     def create_vivarium(self ,art,in_or_out):
-        pass
+
 
